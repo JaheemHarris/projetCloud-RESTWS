@@ -28,6 +28,10 @@ public class SignalementService {
 		return savedSignalement;
 	}
 	
+	public void deleteSignalement(final Long id) {
+		signalementRepository.deleteById(id);
+	}
+	
 	public Signalement updateSignalement(final Long id,Signalement signalement) {
 		Optional<Signalement> signal = signalementRepository.findById(id);
 		Signalement updatedSignalement = null;
