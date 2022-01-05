@@ -28,6 +28,10 @@ public class RegionService {
 		return savedRegion;
 	}
 	
+	public void deleteRegion(final Long id) {
+		regionRepository.deleteById(id);
+	}
+	
 	public Region updateRegion(final Long id,Region region) {
 		Optional<Region> optRegion = this.getRegion(id);
 		Region updatedRegion = null;
