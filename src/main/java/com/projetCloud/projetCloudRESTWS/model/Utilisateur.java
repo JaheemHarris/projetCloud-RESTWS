@@ -1,5 +1,6 @@
 package com.projetCloud.projetCloudRESTWS.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,10 +11,17 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="typesignalement")
-public class TypeSignalement {
+@Table(name="utlisateur")
+public class Utilisateur {
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	private String type;
+	private String nom;
+	private String prenom;
+	private String email;
+	
+	@Column(name="motdepasse")
+	private String motDePasse;
+	
 }
